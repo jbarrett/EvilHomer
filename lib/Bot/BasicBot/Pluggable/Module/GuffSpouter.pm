@@ -61,8 +61,7 @@ sub init( $self ) {
     };
 }
 
-sub said( $self, $message, $pri ) {
-    return unless ($pri == 2);
+sub told( $self, $message ) {
 
     my $channel = lc( $message->{channel} );
     return unless grep { $channel eq lc( $_ ) } @{ $self->targets };
