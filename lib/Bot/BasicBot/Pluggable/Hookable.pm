@@ -24,12 +24,13 @@ sub FOREIGNBUILDARGS( $class, %args ) {
 }
 
 sub BUILD( $self, $args ) {
-    with grep {
+    require Moo::Role;
+    Moo::Role->apply_roles_to_object( $self, grep {
         my $available = $_;
         grep {
             $available =~ /::$_$/
         } @{ $self->enabled_hooks }
-    } _available_hooks();
+    } _available_hooks() );
 }
 
 1;
