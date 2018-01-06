@@ -38,12 +38,6 @@ sub answer( $self ) {
     ( shuffle @{ $self->answers } )[0];
 }
 
-sub get_guff( $self ) {
-    POE::Future->wrap(
-        $self->answer
-    );
-}
-
 sub told( $self, $message ) {
     my ( $command, $param ) = split(/\s+/, $message->{body}, 2);
 
