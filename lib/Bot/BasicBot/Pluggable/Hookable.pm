@@ -1,6 +1,6 @@
 package Bot::BasicBot::Pluggable::Hookable;
 
-use Moo;
+use EvilHomer::Imports;
 extends qw/ Bot::BasicBot::Pluggable /;
 use Clone qw/ clone /;
 
@@ -17,15 +17,13 @@ sub available_hooks {
     _available_hooks;
 }
 
-sub FOREIGNBUILDARGS {
-    my ( $class, %args ) = @_;
+sub FOREIGNBUILDARGS( $class, %args ) {
     my $args_clone = clone( \%args );
     delete $args_clone->{enabled_hooks};
     return %{ $args_clone };
 }
 
-sub BUILD {
-    my ( $self ) = @_;
+sub BUILD( $self, $args ) {
     with grep {
         my $available = $_;
         grep {
