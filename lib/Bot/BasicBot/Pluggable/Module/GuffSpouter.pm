@@ -44,8 +44,8 @@ sub _f( $self, $channel ) {
             sub {
                 $self->_random_guff_module->get_guff
                 ->on_done(
-                    sub( $quote ) {
-                        $self->tell( $channel, $quote )
+                    sub( $guff ) {
+                        $self->tell( $channel, $guff )
                     }
                 )
             }
