@@ -13,10 +13,13 @@ has max_length => (
 
 sub fortune( $self ) {
     my ( $in, $out, $err );
-    run [ qw/ fortune -a -n /, $self->max_length ], \$in, \$out, \$err;
-    $out =~ s/^\s+//;
-    $out =~ s/\s+$//;
-    $out =~ s/\s+/ /gr;
+    do {
+        run [ qw/ fortune -a / ], \$in, \$out, \$err;
+        $out =~ s/^\s+//;
+        $out =~ s/\s+$//;
+        $out =~ s/\s+/ /g;
+    } while ( length $out > $self->max_length );
+    return $out;
 }
 
 sub get_guff( $self ) {
