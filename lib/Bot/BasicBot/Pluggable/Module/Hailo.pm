@@ -3,6 +3,7 @@ package Bot::BasicBot::Pluggable::Module::Hailo;
 use EvilHomer::Imports;
 extends 'Bot::BasicBot::Pluggable::Module';
 
+use POE::Future;
 use Hailo;
 
 has stash_dir => ( is => 'lazy' );
