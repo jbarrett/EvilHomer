@@ -3,6 +3,7 @@ package Bot::BasicBot::Pluggable::Hookable;
 use EvilHomer::Imports;
 extends qw/ Bot::BasicBot::Pluggable /;
 use Clone qw/ clone /;
+use File::HomeDir;
 
 use Module::Pluggable
     sub_name    => '_available_hooks',
@@ -11,6 +12,15 @@ use Module::Pluggable
 has enabled_hooks => (
     is => 'ro',
     default => sub { [] }
+);
+
+has stash_dir => (
+    is => 'ro',
+    default => sub {
+        my $d = catdir( File::HomeDir->my_home, '.evilhomer' );
+        mkdir $d unless -d $d;
+        return $d;
+    }
 );
 
 sub available_hooks {
