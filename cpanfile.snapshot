@@ -1,5 +1,12 @@
 # carton snapshot format: version 1.0
 DISTRIBUTIONS
+  AI-MegaHAL-0.08
+    pathname: C/CH/CHORNY/AI-MegaHAL-0.08.tar.gz
+    provides:
+      AI::MegaHAL 0.08
+    requirements:
+      ExtUtils::MakeMaker 0
+      Test::More 0.47
   B-Hooks-EndOfScope-0.21
     pathname: E/ET/ETHER/B-Hooks-EndOfScope-0.21.tar.gz
     provides:
