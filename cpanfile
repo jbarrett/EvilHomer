@@ -1,0 +1,10 @@
+requires 'Bot::BasicBot::Pluggable::Module';
+requires 'Clone';
+requires 'Future::Utils';
+requires 'IPC::Run';
+requires 'Import::Into';
+requires 'List::Util';
+requires 'Moo';
+requires 'MooX::Options';
+requires 'POE::Future';
+requires 'WWW::BashOrg';
