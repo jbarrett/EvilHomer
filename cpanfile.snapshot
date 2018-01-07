@@ -7,6 +7,17 @@ DISTRIBUTIONS
     requirements:
       ExtUtils::MakeMaker 0
       Test::More 0.47
+  Any-Moose-0.27
+    pathname: E/ET/ETHER/Any-Moose-0.27.tar.gz
+    provides:
+      Any::Moose 0.27
+    requirements:
+      Carp 0
+      ExtUtils::MakeMaker 0
+      Moose 0
+      perl 5.006002
+      strict 0
+      warnings 0
   B-Hooks-EndOfScope-0.21
     pathname: E/ET/ETHER/B-Hooks-EndOfScope-0.21.tar.gz
     provides:
@@ -298,6 +309,25 @@ DISTRIBUTIONS
       ExtUtils::MakeMaker 6.30
       Test::Fatal 0
       Test::More 0
+  DBD-SQLite-1.54
+    pathname: I/IS/ISHIGAKI/DBD-SQLite-1.54.tar.gz
+    provides:
+      DBD::SQLite 1.54
+      DBD::SQLite::Constants undef
+      DBD::SQLite::VirtualTable 1.54
+      DBD::SQLite::VirtualTable::Cursor 1.54
+      DBD::SQLite::VirtualTable::FileContent undef
+      DBD::SQLite::VirtualTable::FileContent::Cursor undef
+      DBD::SQLite::VirtualTable::PerlData undef
+      DBD::SQLite::VirtualTable::PerlData::Cursor undef
+    requirements:
+      DBI 1.57
+      ExtUtils::MakeMaker 0
+      File::Spec 0.82
+      Test::Builder 0.86
+      Test::More 0.47
+      Tie::Hash 0
+      perl 5.006
   DBI-1.639
     pathname: T/TI/TIMB/DBI-1.639.tar.gz
     provides:
@@ -442,6 +472,20 @@ DISTRIBUTIONS
       Test::More 0.88
       Test::Warn 0.08
       perl 5.008_004
+  Data-Dump-1.23
+    pathname: G/GA/GAAS/Data-Dump-1.23.tar.gz
+    provides:
+      Data::Dump 1.23
+      Data::Dump::FilterContext undef
+      Data::Dump::Filtered undef
+      Data::Dump::Trace 0.02
+      Data::Dump::Trace::Call 0.02
+      Data::Dump::Trace::Wrapper 0.02
+    requirements:
+      ExtUtils::MakeMaker 0
+      Symbol 0
+      Test 0
+      perl 5.006
   Data-OptList-0.110
     pathname: R/RJ/RJBS/Data-OptList-0.110.tar.gz
     provides:
@@ -930,6 +974,19 @@ DISTRIBUTIONS
       perl 5.008004
       strict 0
       warnings 0
+  Devel-CheckCompiler-0.07
+    pathname: S/SY/SYOHEX/Devel-CheckCompiler-0.07.tar.gz
+    provides:
+      Devel::AssertC99 undef
+      Devel::CheckCompiler 0.07
+    requirements:
+      Exporter 0
+      ExtUtils::CBuilder 0
+      File::Temp 0
+      Module::Build::Tiny 0.035
+      Test::More 0.98
+      parent 0
+      perl 5.008001
   Devel-GlobalDestruction-0.14
     pathname: H/HA/HAARG/Devel-GlobalDestruction-0.14.tar.gz
     provides:
@@ -974,6 +1031,15 @@ DISTRIBUTIONS
       Digest::base 1.00
       ExtUtils::MakeMaker 0
       perl 5.004
+  Dir-Self-0.11
+    pathname: M/MA/MAUKE/Dir-Self-0.11.tar.gz
+    provides:
+      Dir::Self 0.11
+    requirements:
+      Carp 0
+      ExtUtils::MakeMaker 6.48
+      File::Spec 0
+      strict 0
   Dist-CheckConflicts-0.11
     pathname: D/DO/DOY/Dist-CheckConflicts-0.11.tar.gz
     provides:
@@ -1106,6 +1172,16 @@ DISTRIBUTIONS
       Test::More 0
       URI 0
       perl 5.008001
+  File-CountLines-v0.0.3
+    pathname: M/MO/MORITZ/File-CountLines-v0.0.3.tar.gz
+    provides:
+      File::CountLines v0.0.3
+    requirements:
+      Carp 0
+      Exporter 5.57
+      charnames 1.01
+      strict 0
+      warnings 0
   File-HomeDir-1.002
     pathname: R/RE/REHSACK/File-HomeDir-1.002.tar.gz
     provides:
@@ -1341,6 +1417,51 @@ DISTRIBUTIONS
       ExtUtils::MakeMaker 0
       HTTP::Headers 6
       perl 5.008001
+  Hailo-0.72
+    pathname: A/AV/AVAR/Hailo-0.72.tar.gz
+    provides:
+      Hailo 0.72
+      Hailo::Command 0.72
+      Hailo::Engine::Default 0.72
+      Hailo::Engine::Scored 0.72
+      Hailo::Role::Arguments 0.72
+      Hailo::Role::Engine 0.72
+      Hailo::Role::Storage 0.72
+      Hailo::Role::Tokenizer 0.72
+      Hailo::Role::UI 0.72
+      Hailo::Storage 0.72
+      Hailo::Storage::MySQL 0.72
+      Hailo::Storage::PostgreSQL 0.72
+      Hailo::Storage::SQLite 0.72
+      Hailo::Storage::Schema 0.72
+      Hailo::Tokenizer::Chars 0.72
+      Hailo::Tokenizer::Words 0.72
+      Hailo::UI::ReadLine 0.72
+    requirements:
+      Any::Moose 0.13
+      Class::Load 0.06
+      DBD::SQLite 1.29
+      Data::Dump 1.17
+      Dir::Self 0.10
+      ExtUtils::MakeMaker 6.30
+      File::CountLines v0.0.2
+      File::Spec::Functions 0
+      Getopt::Long::Descriptive 0.085
+      IO::Interactive v0.0.6
+      IPC::System::Simple 1.21
+      List::MoreUtils 0.22
+      Moose 1.08
+      MooseX::Getopt 0.37
+      MooseX::StrictConstructor 0.16
+      Mouse 0.62
+      MouseX::Getopt 0.33
+      MouseX::StrictConstructor 0.02
+      Regexp::Common 2010010201
+      Term::ReadLine 0
+      Term::Sk 0.06
+      Time::HiRes 0
+      autodie 2.08
+      namespace::clean 0.18
   IO-HTML-1.001
     pathname: C/CJ/CJM/IO-HTML-1.001.tar.gz
     provides:
@@ -1350,6 +1471,14 @@ DISTRIBUTIONS
       Encode 2.10
       Exporter 5.57
       ExtUtils::MakeMaker 6.30
+  IO-Interactive-1.022
+    pathname: B/BD/BDFOY/IO-Interactive-1.022.tar.gz
+    provides:
+      IO::Interactive 1.022
+    requirements:
+      ExtUtils::MakeMaker 6.64
+      File::Spec::Functions 0
+      perl 5.008
   IO-Pipely-0.005
     pathname: R/RC/RCAPUTO/IO-Pipely-0.005.tar.gz
     provides:
@@ -1386,6 +1515,21 @@ DISTRIBUTIONS
       ExtUtils::MakeMaker 0
       IO::Pty 1.08
       Test::More 0.47
+  IPC-System-Simple-1.25
+    pathname: P/PJ/PJF/IPC-System-Simple-1.25.tar.gz
+    provides:
+      IPC::System::Simple 1.25
+    requirements:
+      Carp 0
+      Exporter 0
+      ExtUtils::MakeMaker 6.30
+      List::Util 0
+      POSIX 0
+      Scalar::Util 0
+      constant 0
+      re 0
+      strict 0
+      warnings 0
   IRC-Utils-0.12
     pathname: H/HI/HINRIK/IRC-Utils-0.12.tar.gz
     provides:
@@ -1609,6 +1753,21 @@ DISTRIBUTIONS
       perl 5.006
       strict 0
       warnings 0
+  Module-Build-XSUtil-0.18
+    pathname: H/HI/HIDEAKIO/Module-Build-XSUtil-0.18.tar.gz
+    provides:
+      Module::Build::XSUtil 0.18
+    requirements:
+      Devel::CheckCompiler 0
+      Devel::PPPort 0
+      Exporter 0
+      ExtUtils::CBuilder 0
+      File::Basename 0
+      File::Path 0
+      Module::Build 0.4005
+      XSLoader 0
+      parent 0
+      perl 5.008005
   Module-Implementation-0.09
     pathname: D/DR/DROLSKY/Module-Implementation-0.09.tar.gz
     provides:
@@ -2168,6 +2327,22 @@ DISTRIBUTIONS
       Moose::Role 0
       MooseX::ConfigFromFile 0
       perl 5.006
+  MooseX-StrictConstructor-0.21
+    pathname: D/DR/DROLSKY/MooseX-StrictConstructor-0.21.tar.gz
+    provides:
+      MooseX::StrictConstructor 0.21
+      MooseX::StrictConstructor::Trait::Class 0.21
+      MooseX::StrictConstructor::Trait::Method::Constructor 0.21
+    requirements:
+      B 0
+      ExtUtils::MakeMaker 0
+      Moose 0.94
+      Moose::Exporter 0
+      Moose::Role 0
+      Moose::Util::MetaRole 0
+      namespace::autoclean 0
+      strict 0
+      warnings 0
   MooseX-Types-0.50
     pathname: E/ET/ETHER/MooseX-Types-0.50.tar.gz
     provides:
@@ -2229,6 +2404,74 @@ DISTRIBUTIONS
       overload 0
       strict 0
       warnings 0
+  Mouse-v2.5.1
+    pathname: S/SK/SKAJI/Mouse-v2.5.1.tar.gz
+    provides:
+      Mouse v2.5.1
+      Mouse::Exporter undef
+      Mouse::Meta::Attribute undef
+      Mouse::Meta::Class undef
+      Mouse::Meta::Method undef
+      Mouse::Meta::Method::Accessor undef
+      Mouse::Meta::Method::Constructor undef
+      Mouse::Meta::Method::Delegation undef
+      Mouse::Meta::Method::Destructor undef
+      Mouse::Meta::Module undef
+      Mouse::Meta::Role undef
+      Mouse::Meta::Role::Application undef
+      Mouse::Meta::Role::Application::RoleSummation undef
+      Mouse::Meta::Role::Composite undef
+      Mouse::Meta::Role::Method undef
+      Mouse::Meta::TypeConstraint undef
+      Mouse::Object undef
+      Mouse::PurePerl undef
+      Mouse::Role v2.5.1
+      Mouse::Spec v2.5.1
+      Mouse::TypeRegistry undef
+      Mouse::Util v2.5.1
+      Mouse::Util::MetaRole undef
+      Mouse::Util::TypeConstraints undef
+      Squirrel undef
+      Squirrel::Role undef
+      Test::Mouse undef
+      ouse undef
+    requirements:
+      ExtUtils::CBuilder 0
+      Module::Build 0.4005
+      Module::Build::XSUtil 0.18
+      Scalar::Util 1.14
+      XSLoader 0.02
+      perl 5.008005
+  MouseX-Getopt-0.37
+    pathname: G/GF/GFUJI/MouseX-Getopt-0.37.tar.gz
+    provides:
+      MouseX::Getopt 0.37
+      MouseX::Getopt::Basic undef
+      MouseX::Getopt::Dashes undef
+      MouseX::Getopt::GLD undef
+      MouseX::Getopt::Meta::Attribute undef
+      MouseX::Getopt::Meta::Attribute::NoGetopt undef
+      MouseX::Getopt::Meta::Attribute::Trait undef
+      MouseX::Getopt::Meta::Attribute::Trait::NoGetopt undef
+      MouseX::Getopt::OptionTypeMap undef
+      MouseX::Getopt::Strict undef
+    requirements:
+      Getopt::Long 2.37
+      Getopt::Long::Descriptive 0.091
+      Module::Build::Tiny 0.035
+      Mouse 0.64
+      Mouse::Meta::Attribute 0
+      Mouse::Role 0
+      Mouse::Util::TypeConstraints 0
+  MouseX-StrictConstructor-0.02
+    pathname: G/GF/GFUJI/MouseX-StrictConstructor-0.02.tar.gz
+    provides:
+      MouseX::StrictConstructor 0.02
+    requirements:
+      ExtUtils::MakeMaker 6.42
+      Mouse 0.62
+      Test::More 0.88
+      perl 5.006002
   Net-HTTP-6.17
     pathname: O/OA/OALDERS/Net-HTTP-6.17.tar.gz
     provides:
@@ -2547,6 +2790,50 @@ DISTRIBUTIONS
       perl 5.008001
       strict 0
       warnings 0
+  Regexp-Common-2017060201
+    pathname: A/AB/ABIGAIL/Regexp-Common-2017060201.tar.gz
+    provides:
+      Regexp::Common 2017060201
+      Regexp::Common::CC 2017060201
+      Regexp::Common::Entry 2017060201
+      Regexp::Common::SEN 2017060201
+      Regexp::Common::URI 2017060201
+      Regexp::Common::URI::RFC1035 2017060201
+      Regexp::Common::URI::RFC1738 2017060201
+      Regexp::Common::URI::RFC1808 2017060201
+      Regexp::Common::URI::RFC2384 2017060201
+      Regexp::Common::URI::RFC2396 2017060201
+      Regexp::Common::URI::RFC2806 2017060201
+      Regexp::Common::URI::fax 2017060201
+      Regexp::Common::URI::file 2017060201
+      Regexp::Common::URI::ftp 2017060201
+      Regexp::Common::URI::gopher 2017060201
+      Regexp::Common::URI::http 2017060201
+      Regexp::Common::URI::news 2017060201
+      Regexp::Common::URI::pop 2017060201
+      Regexp::Common::URI::prospero 2017060201
+      Regexp::Common::URI::tel 2017060201
+      Regexp::Common::URI::telnet 2017060201
+      Regexp::Common::URI::tv 2017060201
+      Regexp::Common::URI::wais 2017060201
+      Regexp::Common::_support 2017060201
+      Regexp::Common::balanced 2017060201
+      Regexp::Common::comment 2017060201
+      Regexp::Common::delimited 2017060201
+      Regexp::Common::lingua 2017060201
+      Regexp::Common::list 2017060201
+      Regexp::Common::net 2017060201
+      Regexp::Common::number 2017060201
+      Regexp::Common::profanity 2017060201
+      Regexp::Common::whitespace 2017060201
+      Regexp::Common::zip 2017060201
+    requirements:
+      Config 0
+      ExtUtils::MakeMaker 0
+      perl 5.01
+      strict 0
+      vars 0
+      warnings 0
   Role-Tiny-2.000006
     pathname: H/HA/HAARG/Role-Tiny-2.000006.tar.gz
     provides:
@@ -2722,6 +3009,17 @@ DISTRIBUTIONS
       Scalar::Util 1.14
       perl 5.006
       strict 0
+  Term-Sk-0.18
+    pathname: K/KE/KEICHNER/Term-Sk-0.18.tar.gz
+    provides:
+      Term::Sk 0.18
+    requirements:
+      Exporter 0
+      ExtUtils::MakeMaker 0
+      Fcntl 0
+      Time::HiRes 0
+      strict 0
+      warnings 0
   Test-Deep-1.127
     pathname: R/RJ/RJBS/Test-Deep-1.127.tar.gz
     provides:

@@ -37,6 +37,7 @@ has default_modules => (
     default => sub { [ qw/
         Bash
         Fortune
+        Hailo
         GuffSpouter
         EightBall
         Skaal
