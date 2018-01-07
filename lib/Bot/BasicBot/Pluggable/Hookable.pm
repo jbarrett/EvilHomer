@@ -29,7 +29,8 @@ sub available_hooks {
 
 sub FOREIGNBUILDARGS( $class, %args ) {
     my $args_clone = clone( \%args );
-    delete $args_clone->{enabled_hooks};
+    delete $args_clone->{$_}
+        for ( qw/ enabled_hooks stash_dir / );
     return %{ $args_clone };
 }
 
