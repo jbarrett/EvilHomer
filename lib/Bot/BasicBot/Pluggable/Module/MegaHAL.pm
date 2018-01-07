@@ -1,14 +1,14 @@
 package Bot::BasicBot::Pluggable::Module::MegaHAL;
 
-use EvilHomer;
-extends Bot::BasicBot::Pluggable::Module;
+use EvilHomer::Imports;
+extends 'Bot::BasicBot::Pluggable::Module';
 
 # Should definitely be a POE::Component::AI::MegaHAL or something instead
-use IA::MegaHAL;
+use AI::MegaHAL;
 
 has stash_dir => ( is => 'lazy' );
 sub _build_stash_dir( $self ) {
-    catdir( $self->bot->stash_dir, 'megahal' );
+    my $d = catdir( $self->bot->stash_dir, 'megahal' );
     mkdir $d unless -d $d;
     return $d;
 }
