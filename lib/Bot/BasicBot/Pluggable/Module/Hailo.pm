@@ -33,7 +33,7 @@ sub told( $self, $message ) {
     my $nick = lc( $self->bot->nick );
     my $body = $message->{body};
 
-    if ( lc( $message->{address} ) eq $nick ) {
+    if ( $message->{address} && lc( $message->{address} ) eq $nick ) {
         $body =~ s/^$nick[[:alpha:]]+//;
         return $self->hailo->learn_reply( $body );
     }
