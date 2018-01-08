@@ -34,7 +34,7 @@ sub told( $self, $message ) {
     my $body = $message->{body};
 
     if ( $message->{address} && lc( $message->{address} ) eq $nick ) {
-        $body =~ s/^$nick[[:alpha:]]+//;
+        $body =~ s/^$nick[^[:alpha:]]+//;
         return $self->hailo->learn_reply( $body );
     }
     elsif ( $body !~ /^!/ && $message->{channel} =~ /^#/ ) {
