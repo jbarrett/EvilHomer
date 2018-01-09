@@ -1,4 +1,3 @@
-requires 'AI::MegaHAL';
 requires 'Bot::BasicBot::Pluggable::Module';
 requires 'Clone';
 requires 'Future::Utils';
