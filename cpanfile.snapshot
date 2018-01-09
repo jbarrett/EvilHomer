@@ -1492,6 +1492,22 @@ DISTRIBUTIONS
       base 2.18
       strict 0
       warnings 0
+  IO-Socket-SSL-2.052
+    pathname: S/SU/SULLR/IO-Socket-SSL-2.052.tar.gz
+    provides:
+      IO::Socket::SSL 2.052
+      IO::Socket::SSL::Intercept 2.014
+      IO::Socket::SSL::OCSP_Cache 2.052
+      IO::Socket::SSL::OCSP_Resolver 2.052
+      IO::Socket::SSL::PublicSuffix undef
+      IO::Socket::SSL::SSL_Context 2.052
+      IO::Socket::SSL::SSL_HANDLE 2.052
+      IO::Socket::SSL::Session_Cache 2.052
+      IO::Socket::SSL::Utils 2.014
+    requirements:
+      ExtUtils::MakeMaker 0
+      Net::SSLeay 1.46
+      Scalar::Util 0
   IO-Tty-1.12
     pathname: T/TO/TODDR/IO-Tty-1.12.tar.gz
     provides:
@@ -1562,6 +1578,18 @@ DISTRIBUTIONS
     requirements:
       ExtUtils::MakeMaker 0
       perl 5.006002
+  LWP-Protocol-https-6.07
+    pathname: O/OA/OALDERS/LWP-Protocol-https-6.07.tar.gz
+    provides:
+      LWP::Protocol::https 6.07
+      LWP::Protocol::https::Socket 6.07
+    requirements:
+      ExtUtils::MakeMaker 0
+      IO::Socket::SSL 1.54
+      LWP::UserAgent 6.06
+      Mozilla::CA 20110101
+      Net::HTTPS 6
+      perl 5.008001
   Lexical-SealRequireHints-0.011
     pathname: Z/ZE/ZEFRAM/Lexical-SealRequireHints-0.011.tar.gz
     provides:
@@ -2472,6 +2500,14 @@ DISTRIBUTIONS
       Mouse 0.62
       Test::More 0.88
       perl 5.006002
+  Mozilla-CA-20160104
+    pathname: A/AB/ABH/Mozilla-CA-20160104.tar.gz
+    provides:
+      Mozilla::CA 20160104
+    requirements:
+      ExtUtils::MakeMaker 0
+      Test 0
+      perl 5.006
   Net-HTTP-6.17
     pathname: O/OA/OALDERS/Net-HTTP-6.17.tar.gz
     provides:
@@ -2491,6 +2527,16 @@ DISTRIBUTIONS
       strict 0
       vars 0
       warnings 0
+  Net-SSLeay-1.82
+    pathname: M/MI/MIKEM/Net-SSLeay-1.82.tar.gz
+    provides:
+      Net::SSLeay 1.82
+      Net::SSLeay::Handle 0.61
+    requirements:
+      ExtUtils::MakeMaker 6.36
+      MIME::Base64 0
+      Test::More 0.60_01
+      perl 5.005
   Object-Pluggable-1.29
     pathname: H/HI/HINRIK/Object-Pluggable-1.29.tar.gz
     provides:
