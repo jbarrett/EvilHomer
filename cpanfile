@@ -2,6 +2,7 @@ requires 'Bot::BasicBot::Pluggable::Module';
 requires 'Clone';
 requires 'Future::Utils';
 requires 'Hailo';
+requires 'IO::All';
 requires 'IPC::Run';
 requires 'Import::Into';
 requires 'List::Util';
