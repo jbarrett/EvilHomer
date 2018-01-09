@@ -38,6 +38,7 @@ has default_modules => (
         Bash
         Fortune
         Hailo
+        RandQuote
         GuffSpouter
         EightBall
         Skaal
