@@ -27,7 +27,7 @@ sub _build_guff_modules( $self ) {
 
 has delay => (
     is => 'ro',
-    default => sub { 5 * 60 }
+    default => sub { 10 * 60 }
 );
 
 # Futures store. Could use module store, but I froze a code ref once and it
