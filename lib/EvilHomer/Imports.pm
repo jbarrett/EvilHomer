@@ -28,7 +28,7 @@ sub import ( $module, $type = 'class' ) {
         default         { $i->('Moo'); }
     }
 
-    feature->import::into( $caller, qw/ :5.26.1 signatures state /  );
+    feature->import::into( $caller, qw/ :5.26.1 signatures state say / );
 
     warnings->unimport::out_of(
         $caller,
