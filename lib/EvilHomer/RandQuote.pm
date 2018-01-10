@@ -1,12 +1,20 @@
 package EvilHomer::RandQuote;
 
-use EvilHomer::Imports;
+use EvilHomer::Imports 'script';
 use DBI;
 use IO::All -utf8;
 
-has stash_dir => (
+option stash_dir => (
     is => 'ro',
-    required => 1
+    required => 1,
+    format => 's',
+    doc => q{Where does the database live?}
+);
+
+option filename => (
+    is => 'ro',
+    format => 's',
+    doc => q{Add quotes from this file (one per line)}
 );
 
 has dbh => ( is => 'lazy' );
@@ -45,8 +53,17 @@ sub add( $self, $quote ) {
 }
 
 sub add_from_file( $self, $filename ) {
-    $self->insert( $_ ) for ( io( $filename )->chomp->slurp );
+    $self->insert( $_ ) for ( grep { $_ } io( $filename )->chomp->slurp );
     $self->dbh->commit;
+}
+
+sub run( $self ) {
+    if ( $self->filename ) {
+        $self->add_from_file( $self->filename );
+    }
+    else {
+        say $self->quote;
+    }
 }
 
 1;
