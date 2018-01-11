@@ -21,8 +21,10 @@ has dbh => ( is => 'lazy' );
 sub _build_dbh( $self ) {
     my $db = catfile( $self->stash_dir, 'randquote.sqlite' );
     my $dsn = "dbi:SQLite:$db";
-    my $dbh = DBI->connect_cached( $dsn );
-    $dbh->{AutoCommit} = 0;
+    my $dbh = DBI->connect_cached( $dsn, undef, undef, {
+        AutoCommit => 0,
+        sqlite_unicode => 1
+    } );
     $dbh->do('
         CREATE TABLE IF NOT EXISTS randquote (
             randquote TEXT PRIMARY KEY
