@@ -14,7 +14,7 @@ has max_length => (
 sub fortune( $self ) {
     my ( $in, $out, $err );
     do {
-        run [ qw/ fortune -a / ], \$in, \$out, \$err;
+        run [ qw/ fortune all / ], \$in, \$out, \$err;
         $out =~ s/^\s+//;
         $out =~ s/\s+$//;
         $out =~ s/\s+/ /g;
