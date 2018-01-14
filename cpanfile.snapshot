@@ -1476,6 +1476,64 @@ DISTRIBUTIONS
       ExtUtils::MakeMaker 0
       Scalar::Util 0
       perl 5.008001
+  IO-Async-0.71
+    pathname: P/PE/PEVANS/IO-Async-0.71.tar.gz
+    provides:
+      IO::Async 0.71
+      IO::Async::Channel 0.71
+      IO::Async::ChildManager 0.71
+      IO::Async::Debug 0.71
+      IO::Async::File 0.71
+      IO::Async::FileStream 0.71
+      IO::Async::Function 0.71
+      IO::Async::Future 0.71
+      IO::Async::Handle 0.71
+      IO::Async::Listener 0.71
+      IO::Async::Loop 0.71
+      IO::Async::Loop::Poll 0.71
+      IO::Async::Loop::Select 0.71
+      IO::Async::LoopTests 0.71
+      IO::Async::Notifier 0.71
+      IO::Async::OS 0.71
+      IO::Async::OS::MSWin32 0.71
+      IO::Async::OS::cygwin 0.71
+      IO::Async::OS::linux 0.71
+      IO::Async::PID 0.71
+      IO::Async::Process 0.71
+      IO::Async::Protocol 0.71
+      IO::Async::Protocol::LineStream 0.71
+      IO::Async::Protocol::Stream 0.71
+      IO::Async::Resolver 0.71
+      IO::Async::Routine 0.71
+      IO::Async::Signal 0.71
+      IO::Async::Socket 0.71
+      IO::Async::Stream 0.71
+      IO::Async::Test 0.71
+      IO::Async::Timer 0.71
+      IO::Async::Timer::Absolute 0.71
+      IO::Async::Timer::Countdown 0.71
+      IO::Async::Timer::Periodic 0.71
+    requirements:
+      Exporter 5.57
+      File::stat 0
+      Future 0.33
+      Future::Utils 0.18
+      IO::Poll 0
+      Module::Build 0.4004
+      Socket 2.007
+      Storable 0
+      Struct::Dumb 0
+      Time::HiRes 0
+      perl 5.008004
+  IO-Async-Loop-POE-0.05
+    pathname: P/PE/PEVANS/IO-Async-Loop-POE-0.05.tar.gz
+    provides:
+      IO::Async::Loop::POE 0.05
+    requirements:
+      IO::Async 0.49
+      IO::Async::LoopTests 0.32
+      POE 1.293
+      Test::More 0
   IO-HTML-1.001
     pathname: C/CJ/CJM/IO-HTML-1.001.tar.gz
     provides:
@@ -2522,6 +2580,19 @@ DISTRIBUTIONS
       ExtUtils::MakeMaker 0
       Test 0
       perl 5.006
+  Net-Async-HTTP-Server-0.09
+    pathname: P/PE/PEVANS/Net-Async-HTTP-Server-0.09.tar.gz
+    provides:
+      Net::Async::HTTP::Server 0.09
+      Net::Async::HTTP::Server::PSGI 0.09
+      Net::Async::HTTP::Server::Protocol 0.09
+      Net::Async::HTTP::Server::Request 0.09
+      Plack::Handler::Net::Async::HTTP::Server 0.09
+    requirements:
+      HTTP::Request 0
+      IO::Async 0.54
+      IO::Async::Listener 0.61
+      Module::Build 0.4004
   Net-HTTP-6.17
     pathname: O/OA/OALDERS/Net-HTTP-6.17.tar.gz
     provides:
@@ -2971,6 +3042,12 @@ DISTRIBUTIONS
       strict 0
       version 0.83
       warnings 0
+  Struct-Dumb-0.09
+    pathname: P/PE/PEVANS/Struct-Dumb-0.09.tar.gz
+    provides:
+      Struct::Dumb 0.09
+    requirements:
+      Module::Build 0.4004
   Sub-Exporter-0.987
     pathname: R/RJ/RJBS/Sub-Exporter-0.987.tar.gz
     provides:
