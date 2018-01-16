@@ -8,6 +8,8 @@ requires 'IPC::Run';
 requires 'Import::Into';
 requires 'List::Util';
 requires 'LWP::Protocol::https';
+requires 'Mojo';
+requires 'Mojolicious::Plugin::XslateRenderer';
 requires 'Moo';
 requires 'MooX::Options';
 requires 'Net::Async::HTTP::Server';
