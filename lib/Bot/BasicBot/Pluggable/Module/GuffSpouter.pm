@@ -56,6 +56,10 @@ sub _f( $self, $channel ) {
     } while => sub { 1 };
 }
 
+sub return_guff( $self ) {
+    $self->_random_guff_module->get_guff->get;
+}
+
 sub init( $self ) {
     $f = {
         map { $_ => $self->_f( $_ ) }
