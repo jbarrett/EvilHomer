@@ -7,7 +7,7 @@ use IO::Async::Loop::POE;
 use Scalar::Util qw/ reftype /;
 
 has io_async_loop => ( is => 'lazy' );
-sub _build_loop {
+sub _build_io_async_loop {
     IO::Async::Loop::POE->new;
 }
 
@@ -25,7 +25,7 @@ sub init_http( $self, $args ) {
        app => $args->{app}
     );
 
-    $self->loop->add( $http_server );
+    $self->io_async_loop->add( $http_server );
 
     $http_server->listen(
        addr => {
