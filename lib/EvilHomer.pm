@@ -1,6 +1,9 @@
 package EvilHomer;
 
 use EvilHomer::Imports 'script';
+use Plack::Builder;
+use Mojo::Server::PSGI;
+use EvilHomer::Admin;
 
 option server => (
     is => 'ro',
@@ -50,9 +53,46 @@ has default_modules => (
 has default_hooks => (
     is => 'ro',
     default => sub { [ qw/
-        Output
+        HTTPServer
     / ] }
 );
+
+option http_username => (
+    is => 'ro',
+    format => 's',
+    default => sub { $ENV{EVILHOMER_HTTP_USERNAME} },
+);
+
+option http_password => (
+    is => 'ro',
+    format => 's',
+    default => sub { $ENV{EVILHOMER_HTTP_PASSWORD} }
+);
+
+has app => ( is => 'lazy' );
+sub _build_app( $self ) {
+    my $admin_server = Mojo::Server::PSGI->new;
+    $admin_server->build_app( 'EvilHomer::Admin', bot => $self->bot );
+
+    my $basic_auth_cb = sub( $username, $password, $env ) {
+        $username eq $self->http_username && $password eq $self->http_password;
+    };
+
+    my $guff_app = sub {
+        [
+            200, [ "Content-Type" => "text/plain" ],
+            [ $self->bot->module('guffspouter')->return_guff ],
+        ]
+    };
+
+    my $app = builder {
+        enable "Auth::Basic", authenticator => $basic_auth_cb;
+        mount '/' => $guff_app;
+        mount '/admin' => $admin_server->to_psgi_app;
+    };
+
+    return $app;
+}
 
 has bot => ( is => 'lazy' );
 sub _build_bot( $self ) {
@@ -70,6 +110,7 @@ sub _build_bot( $self ) {
 }
 
 sub run( $self ) {
+    $self->bot->init_http( { app => $self->app } );
     $self->bot->run;
 }
 
