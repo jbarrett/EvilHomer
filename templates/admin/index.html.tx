@@ -18,6 +18,8 @@
     <input type="submit" value="Update loaded modules" />
 </form>
 
+<h2>Say</h2>
+
 <form action='<: $c.url_for('/say') :>' method='POST'>
     <p>
     <select name="channel">
