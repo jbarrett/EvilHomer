@@ -38,7 +38,6 @@ sub available_modules_ref( $self ) {
 
 sub update_loaded_set( $self, $modules ) {
     my @available = $self->available_modules;
-    use DDP; p $modules;
 
     for my $module ( @available ) {
         warn "unload $module";
