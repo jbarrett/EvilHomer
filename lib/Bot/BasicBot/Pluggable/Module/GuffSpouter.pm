@@ -9,10 +9,7 @@ use List::Util qw/ shuffle /;
 
 has targets => ( is => 'lazy' );
 sub _build_targets( $self ) {
-    [
-        map { s/\s.*//r }
-        $self->bot->channels
-    ];
+    $self->bot->channels_ref
 }
 
 has guff_modules => ( is => 'lazy' );

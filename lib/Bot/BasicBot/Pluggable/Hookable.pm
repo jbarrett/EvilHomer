@@ -37,7 +37,10 @@ sub available_modules_ref( $self ) {
 }
 
 sub channels_ref( $self ) {
-    [ $self->channels ]
+    [
+        map { s/\s.*//r }
+        $self->channels
+    ]
 }
 
 sub update_loaded_set( $self, $modules ) {
