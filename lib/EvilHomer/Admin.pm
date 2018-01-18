@@ -16,8 +16,14 @@ sub _init_plugins( $self ) {
 
 sub _init_routes( $self ) {
     my $r = $self->routes;
+
     $r->get('/' => sub( $c ) {
         $c->render( template => 'admin/index', bot => $self->bot );
+    } );
+
+    $r->post('/update_loaded_modules' => sub( $c ) {
+        $self->bot->update_loaded_set( $c->req->body_params->names );
+        $c->redirect_to('/');
     } );
 }
 

@@ -1,1 +1,19 @@
+<h1><: $bot.nick :> admin</h1>
 
+<h2>Modules</h2>
+
+<form action='<: $c.url_for('/update_loaded_modules') :>' method='POST'>
+    <table>
+        <tr><th>Module</th><th>Loaded</th></tr>
+        : for $bot.available_modules_ref -> $module {
+            <tr>
+                <td><: $module :></td>
+                <td><input type="checkbox"
+                    name="<: $module :>"
+                    <: $bot.module($module) ? 'checked="checked"' | raw : '' :>
+                /></td>
+            </rt>
+        : }
+    </table>
+    <input type="submit" value="Update loaded modules" />
+</form>
