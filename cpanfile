@@ -13,5 +13,6 @@ requires 'Mojolicious::Plugin::XslateRenderer';
 requires 'Moo';
 requires 'MooX::Options';
 requires 'Net::Async::HTTP::Server';
+requires 'Plack';
 requires 'POE::Future';
 requires 'WWW::BashOrg';
