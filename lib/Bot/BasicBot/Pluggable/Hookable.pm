@@ -36,6 +36,10 @@ sub available_modules_ref( $self ) {
     [ $self->available_modules ]
 }
 
+sub channels_ref( $self ) {
+    [ $self->channels ]
+}
+
 sub update_loaded_set( $self, $modules ) {
     my @available = $self->available_modules;
 

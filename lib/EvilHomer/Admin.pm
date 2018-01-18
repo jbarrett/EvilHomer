@@ -25,6 +25,16 @@ sub _init_routes( $self ) {
         $self->bot->update_loaded_set( $c->req->body_params->names );
         $c->redirect_to('/');
     } );
+
+    $r->post('/say' => sub( $c ) {
+        warn $c->req->body_params->param('channel');
+        warn $c->req->body_params->param('line');
+        $self->bot->say(
+            channel => $c->req->body_params->param('channel'),
+            body => $c->req->body_params->param('body')
+        );
+        $c->redirect_to('/');
+    } );
 }
 
 1;

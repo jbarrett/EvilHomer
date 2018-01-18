@@ -17,3 +17,15 @@
     </table>
     <input type="submit" value="Update loaded modules" />
 </form>
+
+<form action='<: $c.url_for('/say') :>' method='POST'>
+    <p>
+    <select name="channel">
+        : for $bot.channels_ref -> $channel {
+            <option value="<: $channel :>"><: $channel :></option>
+        : }
+    </select>
+    <input type="text" name="body" />
+    </p>
+    <input type="submit" value="Say" />
+</form>
