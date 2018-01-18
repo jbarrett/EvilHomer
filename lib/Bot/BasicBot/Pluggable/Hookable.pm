@@ -32,6 +32,27 @@ sub available_hooks {
     _available_hooks;
 }
 
+sub available_modules_ref( $self ) {
+    [ $self->available_modules ]
+}
+
+sub update_loaded_set( $self, $modules ) {
+    my @available = $self->available_modules;
+    use DDP; p $modules;
+
+    for my $module ( @available ) {
+        warn "unload $module";
+        $self->unload( $module )
+            if !( grep { lc($module) eq lc($_) } @{ $modules } )
+            && $self->module( $module );
+        warn "unload $module complete";
+    }
+
+    for my $module ( @{ $modules } ) {
+        $self->load( $module ) unless $self->module( $module );
+    }
+}
+
 sub FOREIGNBUILDARGS( $class, %args ) {
     my $args_clone = clone( \%args );
     delete $args_clone->{$_}
