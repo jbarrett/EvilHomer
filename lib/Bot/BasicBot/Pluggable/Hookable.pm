@@ -5,10 +5,16 @@ extends qw/ Bot::BasicBot::Pluggable /;
 use Clone qw/ clone /;
 use Symbol qw/ delete_package /;
 use File::HomeDir;
+use IO::Async::Loop::POE;
 
 use Module::Pluggable
     sub_name    => '_available_hooks',
     search_path => 'Bot::BasicBot::Pluggable::Hookable::Hook';
+
+has io_async_loop => ( is => 'lazy' );
+sub _build_io_async_loop {
+    IO::Async::Loop::POE->new;
+}
 
 has enabled_hooks => (
     is => 'ro',

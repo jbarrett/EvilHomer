@@ -6,11 +6,6 @@ use Net::Async::HTTP::Server::PSGI;
 use IO::Async::Loop::POE;
 use Scalar::Util qw/ reftype /;
 
-has io_async_loop => ( is => 'lazy' );
-sub _build_io_async_loop {
-    IO::Async::Loop::POE->new;
-}
-
 has http_server => ( is => 'rw' );
 
 sub init_http( $self, $args ) {
