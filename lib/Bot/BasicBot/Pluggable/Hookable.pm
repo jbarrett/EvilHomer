@@ -3,6 +3,7 @@ package Bot::BasicBot::Pluggable::Hookable;
 use EvilHomer::Imports;
 extends qw/ Bot::BasicBot::Pluggable /;
 use Clone qw/ clone /;
+use Symbol qw/ delete_package /;
 use File::HomeDir;
 
 use Module::Pluggable
@@ -22,6 +23,10 @@ has stash_dir => (
         return $d;
     }
 );
+
+after unload => sub( $self, $module ) {
+    delete_package "Bot::BasicBot::Pluggable::Module::$module";
+};
 
 sub available_hooks {
     _available_hooks;
