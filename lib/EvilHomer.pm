@@ -42,6 +42,7 @@ has default_modules => (
         Fortune
         Hailo
         RandQuote
+        Giphy
         GuffSpouter
         EightBall
         Skaal

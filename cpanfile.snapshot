@@ -1663,6 +1663,19 @@ DISTRIBUTIONS
       IO::Async::LoopTests 0.32
       POE 1.293
       Test::More 0
+  IO-Async-SSL-0.21
+    pathname: P/PE/PEVANS/IO-Async-SSL-0.21.tar.gz
+    provides:
+      IO::Async::SSL 0.21
+      IO::Async::SSLStream 0.21
+    requirements:
+      Future 0.33
+      IO::Async::Handle 0.29
+      IO::Async::Loop 0.66
+      IO::Async::Protocol::Stream 0
+      IO::Async::Stream 0.59
+      IO::Socket::SSL 1.968
+      Module::Build 0.4004
   IO-HTML-1.001
     pathname: C/CJ/CJM/IO-HTML-1.001.tar.gz
     provides:
@@ -2858,6 +2871,29 @@ DISTRIBUTIONS
       ExtUtils::MakeMaker 0
       Test 0
       perl 5.006
+  Net-Async-HTTP-0.41
+    pathname: P/PE/PEVANS/Net-Async-HTTP-0.41.tar.gz
+    provides:
+      Net::Async::HTTP 0.41
+      Net::Async::HTTP::Connection 0.41
+      Net::Async::HTTP::StallTimer 0.41
+    requirements:
+      Future 0.28
+      Future::Utils 0.16
+      HTTP::Cookies 0
+      HTTP::Request 0
+      HTTP::Request::Common 0
+      HTTP::Response 0
+      IO::Async::Loop 0.59
+      IO::Async::Stream 0.59
+      IO::Async::Test 0
+      IO::Async::Timer::Countdown 0
+      List::Util 1.29
+      Struct::Dumb 0.07
+      Test::Identity 0
+      Test::More 0.88
+      Test::Refcount 0
+      URI 0
   Net-Async-HTTP-Server-0.09
     pathname: P/PE/PEVANS/Net-Async-HTTP-Server-0.09.tar.gz
     provides:
@@ -3657,6 +3693,14 @@ DISTRIBUTIONS
       ExtUtils::MakeMaker 6.64
       File::Spec::Functions 0
       perl 5.008
+  Test-Identity-0.01
+    pathname: P/PE/PEVANS/Test-Identity-0.01.tar.gz
+    provides:
+      Test::Identity 0.01
+    requirements:
+      Scalar::Util 0
+      Test::Builder::Tester 0
+      Test::More 0
   Test-Manifest-2.02
     pathname: B/BD/BDFOY/Test-Manifest-2.02.tar.gz
     provides:
@@ -3665,6 +3709,16 @@ DISTRIBUTIONS
       ExtUtils::MakeMaker 0
       Test::More 0.95
       perl 5.006
+  Test-Refcount-0.08
+    pathname: P/PE/PEVANS/Test-Refcount-0.08.tar.gz
+    provides:
+      Test::Refcount 0.08
+    requirements:
+      B 0
+      Scalar::Util 0
+      Test::Builder 0
+      Test::Builder::Tester 0
+      Test::More 0
   Test-Requires-0.10
     pathname: T/TO/TOKUHIROM/Test-Requires-0.10.tar.gz
     provides:
