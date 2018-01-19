@@ -82,10 +82,6 @@ sub fetch( $self, $search ) {
     $self->image( $future->get->content );
 }
 
-sub get_guff( $self ) {
-    Future->wrap( $self->fetch( undef ) );
-}
-
 sub told( $self, $message ) {
     my ( $command, $param ) = split(/\s+/, $message->{body}, 2);
     return unless $command eq '!gif';
