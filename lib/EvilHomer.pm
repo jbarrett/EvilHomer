@@ -44,6 +44,7 @@ has default_modules => (
         RandQuote
         Giphy
         GuffSpouter
+        AsciiEmoji
         EightBall
         Skaal
         Karma
