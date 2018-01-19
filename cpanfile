@@ -1,3 +1,4 @@
+requires 'Acme::AsciiEmoji';
 requires 'Bot::BasicBot::Pluggable::Module';
 requires 'Clone';
 requires 'Future::Utils';

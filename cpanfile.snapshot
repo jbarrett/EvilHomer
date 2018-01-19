@@ -1,5 +1,16 @@
 # carton snapshot format: version 1.0
 DISTRIBUTIONS
+  Acme-AsciiEmoji-0.10
+    pathname: L/LN/LNATION/Acme-AsciiEmoji-0.10.tar.gz
+    provides:
+      Acme::AsciiEmoji 0.10
+    requirements:
+      Exporter::Tiny 0
+      ExtUtils::MakeMaker 0
+      Test::More 0
+      perl 5.006
+      strict 0
+      warnings 0
   Any-Moose-0.27
     pathname: E/ET/ETHER/Any-Moose-0.27.tar.gz
     provides:
