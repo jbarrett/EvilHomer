@@ -49,6 +49,7 @@ has default_modules => (
         Skaal
         Karma
         Title
+        Roll
     / ] }
 );
 
